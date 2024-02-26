@@ -1,13 +1,23 @@
-\documentclass[11pt,letterpaper,twocolumn]{article}
+% \documentclass[10pt,letterpaper,twocolumn]{article}
+\documentclass[sigconf, anonymous]{acmart}
 
 % conference specific style
-\usepackage[11pt,nocopyright]{sigmin}
-\usepackage[square,comma,numbers,sort&compress]{natbib}
+% \usepackage[11pt,nocopyright]{sigmin}
+% \usepackage[square,comma,numbers,sort&compress]{natbib}
 
 % common packages
 \include{pkgs}
 
-\newcommand{\sys}{\mbox{\textsc{Die}}\xspace}
+\newcommand{\sys}{\mbox{\textsc{OTABase}}\xspace}
+
+% \fancyhead[C]{Anonymous submission \#9999 to ACM CCS 2024} % TODO: replace 9999 with your paper number
+% \fancyfoot[C]{\thepage}
+
+\setcopyright{none} % No copyright notice required for submissions
+\acmConference[Anonymous Submission to ACM CCS 2024]{ACM Conference on Computer and Communications Security}{Due 29 Apr 2024}{Salt Lake City, USA}
+\acmYear{2024}
+
+\settopmatter{printacmref=false, printccs=true, printfolios=true} % We want page numbers on submissions
 
 % ref. http://en.wikibooks.org/wiki/LaTeX/Colors
 \newcommand{\IY}[1]{\textcolor{Orange}{IY: #1}}
@@ -16,18 +26,22 @@
 \newcommand{\TODO}[1]{\textcolor{Melon}{TODO: #1}}
 
 \input{cmds}
-\input{rev}
+% \input{rev}
 
 \begin{document}
 
 \input{hdr}
 \date{}
+
+\input{abstract}
+
+
 \maketitle
 
 \sloppy
 
-\input{abstract}
 \input{intro}
+\input{backgnd}
 \input{overview}
 \input{design}
 \input{impl}
